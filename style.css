@@ -1,6 +1,9 @@
 
 body {
     background-color:thistle;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 20px;
+    font-size: 16px;
 
   }
 
@@ -273,6 +276,25 @@ button:hover {
   border: 25px;
 
 }
+p{
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+@media(max-width:767px){
+  body{
+    font-size: 14px;
+  }
+}
+@media(min-width:768px)and (max-width:1023px){
+  body{
+    font-size: 16px;
+  }
 
+}
+@media(min-width:1024px){
+  body{
+    font-size: 18px;
+  }
+}
   
 
