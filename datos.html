@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Datos cargados</title>
+</head>
+<body>
+    <h1 id="final">¡Gracias por tu mensaje!</h1>
+    <p id="parrafo">Los datos han sido cargados correctamente</p>
+    <table id="myTable" border="1"></table>
+    
+    <script language="javascript">
+     document.addEventListener("DOMContentLoaded", function() {
+        var args = location.search.substr(1).split('&');
+        var table = document.getElementById('myTable'); // Obtén la referencia de la tabla
+
+        for (var i = 0; i < args.length; ++i) {
+            var parts = args[i].split('=');
+            if (parts.length === 2) {
+                var field = decodeURIComponent(parts[0]);
+                var value = decodeURIComponent(parts[1].replace(/\+/g, ' '));
+                value = value === "null" ? "null" : value;
+
+                // Crea una nueva fila
+                var row = table.insertRow();
+
+                // Crea celdas para el campo y el valor
+                var cell1 = row.insertCell(0);
+                var cell2 = row.insertCell(1);
+
+                // Agrega el contenido a las celdas
+                cell1.textContent = field;
+                cell1.style.textAlign = 'center';
+                cell2.textContent = value;
+                cell2.style.textAlign = 'center';
+            }
+        }
+    });
+      </script>
+ 
+
+    
+</body>
+<section class="footer">
+    <div class="footer__rodape">
+        <p> Página desarrollada por Martin Bustos, en colaboración con Tupac's Enterprise, todos los derechos reservados</p>
+        <p> &copy;Copyrigth 2024</p>
+    </div>
+</section>
+
+</html>
