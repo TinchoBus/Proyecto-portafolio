@@ -65,8 +65,8 @@ body {
   }
   .contenedor{ /*REDES SOCIALES Y CUURRICULO*/
     font-size: 20px;
-    display: flex;
-    justify-content: space-around;
+    /*display: flex;*/
+    /*justify-content: space-around;*/
     align-items: center;
     margin-right: 100px;
     text-align: justify;
